@@ -96,7 +96,7 @@ class _TripPageState extends State<TripPage> {
                           style: FilledButton.styleFrom(
                             minimumSize: const Size(150, 40),
                           ),
-                          child: const Text('จองเลย!!'),
+                          child: const Text('จองเลย'),
                         ),
                       ],
                     ),

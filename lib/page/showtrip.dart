@@ -23,12 +23,9 @@ class _ShowTripPageState extends State<ShowTripPage> {
 
   @override
   void initState() {
-    // TODO: implement initState
+
     super.initState();
-    // Configuration.getConfig().then((config) {
-    //   url = config['apiEndpoint'];
-    //   getAllTrips();
-    // });
+ 
 
     loadData = getAllTrips();
   }
@@ -92,12 +89,12 @@ class _ShowTripPageState extends State<ShowTripPage> {
                             child: const Text('เอเชีย'),
                           ),
                           FilledButton(
-                            onPressed: getSouthEast,
+                            onPressed: getSouthEastasia,
                             child: const Text('เอเขียตะวันออกเฉียงใต้'),
                           ),
                           FilledButton(
-                            onPressed: getThailand,
-                            child: const Text('ประเทศไทย'),
+                            onPressed: getAmerica,
+                            child: const Text('อเมริกา'),
                           ),
                         ],
                       ),
@@ -203,13 +200,13 @@ class _ShowTripPageState extends State<ShowTripPage> {
     );
   }
 
-  Future<void> getThailand() async {
+  Future<void> getAmerica() async {
     List<TripGetResponse> thailandTrip = [];
     var res = await http.get(Uri.parse('$API_ENDPOINT/trips'));
     tripGetResponses = tripGetResponseFromJson(res.body);
 
     for (var trip in tripGetResponses) {
-      if (trip.destinationZone == "ประเทศไทย") {
+      if (trip.destinationZone == "อเมริกา") {
         thailandTrip.add(trip);
       }
     }
@@ -219,7 +216,7 @@ class _ShowTripPageState extends State<ShowTripPage> {
     });
   }
 
-  Future<void> getSouthEast() async {
+  Future<void> getSouthEastasia() async {
     List<TripGetResponse> southEastAsiaTrip = [];
     var res = await http.get(Uri.parse('$API_ENDPOINT/trips'));
     tripGetResponses = tripGetResponseFromJson(res.body);
@@ -255,7 +252,6 @@ class _ShowTripPageState extends State<ShowTripPage> {
     List<TripGetResponse> europeTrip = [];
     var res = await http.get(Uri.parse('$API_ENDPOINT/trips'));
     tripGetResponses = tripGetResponseFromJson(res.body);
-
     for (var trip in tripGetResponses) {
       if (trip.destinationZone == "ยุโรป") {
         europeTrip.add(trip);
