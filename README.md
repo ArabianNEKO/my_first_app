@@ -6,9 +6,9 @@ A new Flutter project.
 
 ![My Logo](Screen%20shot/Login.png)
 ![My Logo](Screen%20shot/Register.png)
-![My Logo](Screen%20shot/Profile.png)
+![My Logo](Screen%20shot/Proflie.png)
 ![My Logo](Screen%20shot/Trip.png)
-![My Logo](Screen%20shot/Menu%20trip.png)
+![My Logo](Screen%20shot/Menu%20trips.png)
 
 
 
